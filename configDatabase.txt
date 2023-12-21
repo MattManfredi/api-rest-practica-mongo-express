@@ -1,0 +1,4 @@
+usu: mattmanfredi
+pass: TounFmJjQnn39ZO1
+
+mongodb+srv://mattmanfredi:<password>@cluster0.ctova48.mongodb.net/?retryWrites=true&w=majority
