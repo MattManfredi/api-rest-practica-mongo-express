@@ -23,6 +23,7 @@ app.use(cookieParser())
 app.use('/',redirectRouter)
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/links', linkRouter)
+// test
 // Solo practica de login y token
 // app.use(express.static('public'))
 
