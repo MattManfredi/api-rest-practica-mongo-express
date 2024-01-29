@@ -9,15 +9,19 @@ import cors from 'cors';
 
 // Inicializo servidor express
 const app = express();
-const whiteList =[process.env.ORIGIN1]
+
+
+const whiteList = [process.env.ORIGIN1]
+
 app.use(cors({
     origin: function(origin, callback){
-        if(whiteList.includes(origin)){
+        if(!origin || whiteList.includes(origin)){
             return callback(null, origin);
         }
-        return callback("Error de CORS origin: "+origin+" no autorizado!");
+        return callback("Error de CORS origin: " + origin + " no autorizado!");
     }
 }));
+
 app.use(express.json())
 app.use(cookieParser())
 app.use('/',redirectRouter)
